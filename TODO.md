@@ -1,2 +1,0 @@
-- tailwind as an exportable package
-- create button component
