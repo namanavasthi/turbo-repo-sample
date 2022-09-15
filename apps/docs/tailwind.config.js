@@ -1,6 +1,11 @@
 const tw = require("tailwind").tw;
+const CustomPlugin = require("tailwind").CustomPlugin;
+
+console.log("custom Plugin");
+console.log(CustomPlugin);
 
 module.exports = {
   ...tw,
-  content: ["../../packages/**/*.{js,ts,jsx,tsx}"],
+  content: ["./stories/**.mdx"],
+  plugins: [CustomPlugin],
 };

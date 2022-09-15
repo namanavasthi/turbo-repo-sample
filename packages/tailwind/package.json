@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "tailwind",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,11 +10,11 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "npm run build:tailwind && npm run build:code",
-    "build:code": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "build:tailwind": "postcss ./src/styles.css --o ../tailwind/dist/button.css",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
-    "lint": "TIMING=1 eslint src/**/*.ts* --fix",
+    "prejss": "prejss-cli dist/*.css --format commonjs",
+    "build:code": "tsup index.ts --format esm,cjs --dts",
+    "build": "npm run prejss && npm run build:code",
+    "dev": "tsup index.ts --format esm,cjs --watch --dts",
+    "lint": "TIMING=1 eslint *.ts --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
@@ -22,12 +22,12 @@
     "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
     "eslint-config-acme": "*",
+    "prejss-cli": "^0.3.3",
     "react": "^18.1.0",
     "tailwindcss": "^3.1.8",
     "tsconfig": "*",
     "tsup": "^5.10.1",
-    "typescript": "^4.5.3",
-    "tailwind": "*"
+    "typescript": "^4.5.3"
   },
   "publishConfig": {
     "access": "public"
