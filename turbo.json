@@ -1,12 +1,35 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
+    "build:tailwind": {
+      "outputs": [
+        "dist/**"
+      ],
+      "dependsOn": ["^build:tailwind"]
+    },
+    "build:components": {
+      "outputs": [
+        "dist/**"
+      ],
+      "dependsOn": [ "^build"
+      ]
+    },
+    "build:plugin": {
+      "outputs": [
+        "dist/**"
+      ],
+      "dependsOn": [ "^build:components"
+      ]
+    },
     "build": {
       "outputs": [
         "dist/**",
         ".next/**"
       ],
       "dependsOn": [
+        "build:tailwind",
+        "build:components",
+        "build:plugin",
         "^build"
       ]
     },

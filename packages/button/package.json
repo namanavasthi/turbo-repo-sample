@@ -10,9 +10,8 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "npm run build:tailwind && npm run build:code",
-    "build:code": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "build:tailwind": "postcss ./src/styles.css --o ../tailwind/dist/button.css",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "build:components": "postcss ./src/styles.css --o ../plugin/dist/components/button.css",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"

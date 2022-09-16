@@ -17,6 +17,10 @@ module.exports = {
             find: "button",
             replacement: path.resolve(__dirname, "../../../packages/button/"),
           },
+          {
+            find: "text",
+            replacement: path.resolve(__dirname, "../../../packages/text/"),
+          },
         ],
       },
     };
