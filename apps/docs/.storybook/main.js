@@ -15,7 +15,10 @@ module.exports = {
         alias: [
           {
             find: "button",
-            replacement: path.resolve(__dirname, "../../../packages/button/"),
+            replacement: path.resolve(
+              __dirname,
+              "../../../packages/components/button/"
+            ),
           },
         ],
       },

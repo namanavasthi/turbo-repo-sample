@@ -1,43 +1,11 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
-    "build:tailwind": {
-      "outputs": [
-        "dist/**"
-      ],
-      "dependsOn": ["^build:tailwind"]
-    },
-    "build:components": {
-      "outputs": [
-        "dist/**"
-      ],
-      "dependsOn": [ "^build:tailwind"
-      ]
-    },
-    "build:plugin": {
-      "outputs": [
-        "dist/**"
-      ],
-      "dependsOn": [ "^build:plugin"
-      ]
-    },
-    "pre:build": {
-      "outputs": [
-        "dist/**",
-        ".next/**"
-      ],
-      "dependsOn": [
-        "^build:tailwind",
-        "build:components"
-      ]
-    },
     "build": {
       "outputs": [
-        "dist/**",
-        ".next/**"
+        "dist/**"
       ],
       "dependsOn": [
-        "build:plugin",
         "^build"
       ]
     },

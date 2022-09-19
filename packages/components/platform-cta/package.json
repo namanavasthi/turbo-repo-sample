@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "platform-cta",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -11,7 +11,6 @@
   ],
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "build:components": "postcss ./src/styles.css --o ../plugin/dist/components/button.css",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
@@ -20,13 +19,13 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
-    "eslint-config-acme": "*",
+    "eslint-config-custom": "../*",
     "react": "^18.1.0",
     "tailwindcss": "^3.1.8",
-    "tsconfig": "*",
+    "tsconfig": "../*",
     "tsup": "^5.10.1",
     "typescript": "^4.5.3",
-    "tailwind": "*"
+    "tailwind": "../*"
   },
   "publishConfig": {
     "access": "public"

@@ -4,12 +4,11 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "packages/components/*"
   ],
   "scripts": {
-    "pre:build": "turbo run pre:build",
-    "post:build": "turbo run build",
-    "build": "npm run pre:build && npm run post:build",
+    "build": "turbo run build",
     "changeset": "changeset",
     "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev --no-cache --parallel --continue",

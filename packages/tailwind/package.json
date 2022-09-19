@@ -10,7 +10,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build:tailwind": "tsup index.ts --format esm,cjs --dts",
+    "build": "tsup index.ts --format esm,cjs --dts",
     "dev": "tsup index.ts --format esm,cjs --watch --dts",
     "lint": "TIMING=1 eslint *.ts --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
