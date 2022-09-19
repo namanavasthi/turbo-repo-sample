@@ -11,14 +11,24 @@
       "outputs": [
         "dist/**"
       ],
-      "dependsOn": [ "^build"
+      "dependsOn": [ "^build:tailwind"
       ]
     },
     "build:plugin": {
       "outputs": [
         "dist/**"
       ],
-      "dependsOn": [ "^build:components"
+      "dependsOn": [ "^build:plugin"
+      ]
+    },
+    "pre:build": {
+      "outputs": [
+        "dist/**",
+        ".next/**"
+      ],
+      "dependsOn": [
+        "^build:tailwind",
+        "build:components"
       ]
     },
     "build": {
@@ -27,8 +37,6 @@
         ".next/**"
       ],
       "dependsOn": [
-        "build:tailwind",
-        "build:components",
         "build:plugin",
         "^build"
       ]
