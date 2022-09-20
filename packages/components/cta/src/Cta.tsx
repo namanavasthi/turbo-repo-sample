@@ -1,5 +1,4 @@
 import * as React from "react";
-
 export interface CtaProps {
   children: React.ReactNode;
   type: "btn";
