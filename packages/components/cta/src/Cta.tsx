@@ -7,5 +7,4 @@ export interface CtaProps {
 export function Cta(props: CtaProps) {
   return <button className={props.type}>{props.children}</button>;
 }
-
 Cta.displayName = "Cta";

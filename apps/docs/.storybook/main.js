@@ -14,10 +14,10 @@ module.exports = {
       resolve: {
         alias: [
           {
-            find: "button",
+            find: "@platform/cta",
             replacement: path.resolve(
               __dirname,
-              "../../../packages/components/button/"
+              "../../../packages/components/cta/"
             ),
           },
         ],
